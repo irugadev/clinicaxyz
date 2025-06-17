@@ -1,0 +1,550 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* importa icones para usar */
+/* é um seletor de formataçao universal e aplica-se a todas as tags */
+* {
+    margin: 0;
+    /* Margem externa */
+    padding: 0;
+    /* Margem interna */
+    box-sizing: border-box;
+    /* Altera a forma como o CSS contabiliza o tamanho de um objeto. Incluindo as bordas e margens e o tamanho do objeto */
+}
+
+/* Regra */
+body {
+    /* Propriedade: valor */
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    background-color: #0e365f;
+    /*Cor de fundo*/
+    text-align: center;
+    /*Centraliza um texto na pagina */
+    margin: 0px 0px 0px 0px;
+    padding: 20px 0px 20px 0px;
+    /* Top Right Botton Left - ordem no sentido horario */
+}
+footer {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+
+/* formataçao generica paras os links */
+a{
+    text-decoration: none;      /* retirar o sublinhado dos links */
+    color: #391299;            /* alterar a cor */
+}
+a:hover{
+    text-decoration: underline;     /* volta o sublinhado quando passa o mouse em cima */
+}
+
+/* formataçao da home */
+main {
+    width: 1200px;
+    /* Fixa a largura */
+    margin: 0 auto 0 auto;
+    /* Centraliza o container (elemento d bloco)*/
+    padding: 40px 0px 40px 0px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* o ponto inicial (.) indica que destaque é uma classe, diferente de uma tag */
+.destaque {
+    text-align: center;
+
+    p {
+        /* CSS nesting (alinhamento de css) */
+        color: #444;
+        /*cor da letra */
+        font-size: 1.1rem;
+        /*tamanho da letra */
+        line-height: 150%;
+        /*Altura da linha, espacamento entre linhas */
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+        font-weight: 600;   /* carga com valores de 100 a 900  se a fonte permitir */
+        /* font-style: italic; */
+    }
+}
+
+.grid-home {
+    display: flex;
+    /* flexbox */
+    flex-wrap: wrap;
+    /* permitir a quebra de linha dos elementos */
+    gap: 25px;
+
+    /* espacamento entre os elementos */
+    * {
+        flex-basis: 250px;
+        /* o tamanho inicial para o elemento filho */
+        flex-grow: 1;
+        /* permitir o aumento de tamanho */
+        flex-shrink: 1;
+        /* permite reduzir o tamanho */
+    }
+    a{
+        text-decoration: none; /* Tirar sublinhado */
+        color: #000;
+    }
+}
+
+.card {
+    /* 0: descolocamento horizontal, 3px: deslocamento vertical, 10px: desfoque, rgba: cor da sombra */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    /* Aplicar sombra */
+    padding-bottom: 15px;
+    /* margem interna inferior */
+    border-radius: 10px;
+    /*faz o arredondamento das bordas */
+    text-align: center;
+
+    img {
+        width: 100%;
+        /* fixa a largura proporcional */
+        object-fit: cover;
+        /* imagem se ajusta ao container, proporçao original */
+        height: 160px;
+        /* altura original da imagem */
+    }
+
+    h3 {
+        color: #6a3bc8;
+        margin: 15px 0 8px 0;
+    }
+
+    p {
+        font-size: 0.95rem;
+        padding: 0px 10px;
+
+    }
+}
+
+/* Formata o comportamento do card. */
+.card:hover {
+    transform: translateY(-5px);
+    /* Modifica a aparencia visual do elemento */
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+
+    a {
+        background-color: #aaa;
+        padding: 10px 15px;
+        /* 10px = top e botton / 15px = left e right */
+        text-decoration: none;
+        /*tira o sublinhado do link */
+        color: white;
+        border-radius: 8px;
+        /* arredondar os cantos */
+    }
+
+    a:hover {
+        transform: translateY(-2px);
+    }
+
+    /* nth-child = comando utilizado para formatar grupos de tags seguidas (elementos filhos) */
+    a:nth-child(1) {
+        background-color: #3b5998;
+        /* SHIFT+ALT+SETA para copiar linhas */
+    }
+
+    a:nth-child(2) {
+        background-color: #ff0000;
+    }
+
+    a:nth-child(3) {
+        background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    }
+
+    a:nth-child(4) {
+        background-color: #25d366;
+    }
+
+    a:nth-child(5) {
+        background-color: #000;
+    }
+}
+/* Link voltar - rodape da pagina */
+.voltar{ 
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+/* formataçao do grid de clinica */
+.grid-clinica{
+    display: flex;      /* opçao por layout em grid (grades). O padrao para o display é block */
+    justify-content: space-between;     /* Faz o alinhamento pelas margens externas (direita e esquerda) */
+    gap: 1.5rem;
+    align-items: flex-start;
+    div{
+        flex-grow: 1;   /* Permite expandir a largura */
+        flex-shrink: 1; /* Permite reduzir a largura */
+        flex-basis: 300px;  /*Tamanho inicial */
+    }
+    img{
+        width: 100%;    /* imagem responsiva */
+    }
+    h2{
+        text-align: start; /* alinha a esquerda */
+        margin-bottom: 15px;
+        margin-top: 0px;
+    }
+    p{
+        line-height: 150%; /* Altura da linha/margem */
+        margin-bottom: 15px;    /* Marge inferior */
+    }
+    ul, ol{
+        padding-left: 20px;
+        list-style: square;
+        li{
+            line-height: 175%;
+        }
+    }
+}
+.grid-especialidades{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    * {
+        flex-basis: 300px;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 220px;
+    }  
+    h3 {
+        color: #000000;
+        margin: 15px 0 8px 0;
+    }
+    p {
+        font-size: 0.95rem;
+        padding: 0px 10px;
+    }
+}
+
+/* Formataçao das tabelas */
+table{
+    width: 100%;
+    border-collapse: collapse;      /* justa as bordas da tabela em uma só linha */
+}
+th{
+    text-align: start; /* alinhamento a esquerda */ 
+}
+.tabela1 th{
+    background-color: #aaa;
+    border: 2px solid #aaa;
+    padding: 8px;
+}
+.tabela1 td{
+    border: 2px solid #ccc;
+    padding: 8px;
+}
+.tabela1 th:nth-child(3),       /* a virgula serve para juntas as duas linhas sobre o mesmo codigo */
+.tabela1 td:nth-child(3){       /* Pseudo-Seletor */
+    text-align: end;
+    font-weight: 500;
+}
+.tabela1 th:nth-child(4),     
+.tabela1 td:nth-child(4){       
+    text-align: center;
+}
+
+
+.tabela2 th{
+    border-bottom: 2px solid #aaa;
+    padding: 8px;
+}
+.tabela2 td{
+    border-bottom: 1px solid #aaa;
+    padding: 8px;
+}
+.tabela2 tr{
+    border-bottom: 2px #aaa;
+
+}
+.tabela2 th:nth-child(3),
+.tabela2 td:nth-child(3){
+    text-align: end;
+    font-weight: 500;
+}
+.tabela2 th:nth-child(4),     
+.tabela2 td:nth-child(4){       
+    text-align: center;
+}
+
+
+
+.tabela3 tr:nth-child(even){
+    background-color: #ccc;
+}
+/* .tabela3 tr:nth-child(odd){
+    background-color: #f5a2a2;
+} */
+.tabela3 th{
+    background-color: #ccc;
+    border: 2px;
+    padding: 8px;
+}
+.tabela3 td{
+    border: 2px;
+    padding: 8px;
+}
+.tabela3 th:nth-child(3),       /* a virgula serve para juntas as duas linhas sobre o mesmo codigo */
+.tabela3 td:nth-child(3){       /* Pseudo-Seletor */
+    text-align: end;
+    font-weight: 500;
+}
+.tabela3 th:nth-child(4),     
+.tabela3 td:nth-child(4){       
+    text-align: center;
+}
+
+/* Abaixo a Formataçao da galeria de imagens */
+
+.galeria-destaque{
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 30px 0px 10px 0px;
+    
+    img{
+        width: 60%;
+    }
+}
+
+.galeria-miniatura{
+    display: flex;
+    justify-content: space-between;
+
+    img{
+        width: 110px;
+    }
+}
+
+.videos{
+    text-align: center;
+    video{
+        width: 70%;
+    }
+    iframe{
+        width: 70%;
+        height: 480px;
+        /* height: 60vh; */
+    }
+}
+
+.grid-convenios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    
+    * {
+        flex-basis: 200px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding-bottom: 80px;
+    }
+
+    h2{
+        text-decoration: none;
+        color: #0e365f;
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    i{
+        font-size: 80px;
+        color: #0e365f;
+    }
+}
+
+.grid-contato{
+    display: flex;
+    justify-content: space-between;
+
+    div{                    /* formataçao para todas as divs de contato */
+        flex-basis: 45%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    div:last-child{         /* a tag LAST-CHILD formata apenas a ultima div da lista */
+        iframe{
+            width: 100%;
+            height: 60vh;
+        }
+    }
+    label{
+        display: block;
+        /* background-color: #405de6; */
+        text-transform: uppercase;      /* transforma o texto todo em letras maiusculas */
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        color:#0e365f;
+    }
+    input[type=text], input[type=email], textarea{
+        padding: 10px;
+        width: 90%;
+        border: 1px solid #bbb;
+        border-radius: 5px;             /* arredonda as bordas da caixa de digitaçao */
+    }
+    select{
+        padding: 8px;
+        border: 1px solid #bbb;
+        border-radius: 5px;
+    }
+    input[type=checkbox]{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+.agendamento{
+    margin: 0px auto;   /* Centralize o container */
+    width: 50%;
+    text-align: center; /* Centraliza o conteudo do container */
+
+    label{
+        display: block;
+        text-transform: uppercase;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        color: #555;
+    }
+    .form-group{
+        display: flex;
+        justify-content: space-between;
+    }
+    input[type=date],
+    input[type=time],
+    input[type=text],
+    select{
+        padding: 10px;
+        border:  1px solid #bbb;
+        border-radius:  5px;
+    }
+    input[type=time]{
+        padding: 9px;
+    }
+    input[type=text]{
+        width: 80%;
+    }
+    input[type=submit]{
+        border-style: none;
+        background-color: #3b5998;
+        color: #fff;
+        padding: 10px 30px;
+        border-radius: 5px;
+        cursor: pointer;            /* muda o desenho do cursor sobre o botao */
+    }
+    input[type=submit]:hover{   /* troca a cor de fundo ao passar o mouse */
+        background-color: #00060a;
+
+    }
+    div{
+        margin-top: 30px;
+    }
+}
+/* !important - deve ser usado para dar prioridade a alguma linha de formataçao quando houver conflitos (codigo duplicado) */
+
+/* Formataçao para laoyout responsivo: */
+@media screen and (max-width: 800px){       /* media queries */
+    /* header{
+        background-color: yellowgreen;
+    }   */
+    main{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .grid-home{
+        *{
+            flex-basis: 100%;
+        }
+    }
+    .grid-clinica,
+    .grid-especialidades,
+    .grid-convenios,
+    .form-group,
+    .grid-contato{
+        flex-direction: column;
+        align-items: center;
+    }
+    .videos{
+        iframe{
+            width: 95%;
+            height: 30vh;
+        }
+        video{
+            width: 95%;
+        }
+    }
+    .galeria-destaque{
+        img{
+            width: 100%;
+        }
+    }
+    .galeria-miniatura{
+        flex-wrap: wrap;
+        img{
+            width: 20%;
+        }
+    }
+    .agendamento{
+        width: 100%;
+
+    }
+    .grid-contato{
+        div:last-child{
+            margin-top: 50px;
+        }
+    }
+    .grid-clinica{
+        .card{
+            width: 100%;
+        }
+        div{
+            flex-basis: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px){ 
+    /* header{
+        background-color: crimson;
+    }     */
+}
+@media screen and (max-width: 400px){ 
+    /* header{
+        background-color: aqua;
+    }     */
+}

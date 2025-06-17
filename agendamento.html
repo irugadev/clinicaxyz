@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica XyZ - Agendamento Medico</title>
+    <meta name="description" content="Clinica com atendimento em varias especialidades medicas na cidade de Limeira">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="Logo da clinica XyZ">
+    </header>
+    <main>
+        <section class="destaque">
+            <h1>Clinica XyZ</h1>
+            <p>Agendamento de Especialidades em Nossa Clinica</p>
+        </section>
+
+        <section class="agendamento">
+            <form action="" method="post" name="form-agendamento" id="form-agendamento">
+                <div class="form-group">
+                    <div>
+                        <label for="">Selecione a Data: </label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div>
+                        <label for="">Selecione a Hora: </label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                    <div>
+                        <label for="">Selecione a Especialidade: </label>
+                        <select name="especialidade" id="especialidade">
+                            <option>- - - - -</option>
+                            <option>Cardiologia</option>
+                            <option>Geriatria</option>
+                            <option>Ortopedia</option>
+                            <option>Otorrino</option>
+                            <option>Pediatria</option>
+                            <option>Psicologo</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="">Nome Completo: </label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div>
+                    <input type="submit" value="Confirmar Agendamento" name="confirmar">
+                </div>
+            </form>
+ 
+        </section>
+
+        <section class="voltar">
+            <a href="index.html"><i class="bi bi-arrow-left-circle-fill"></i> Voltar</a>
+        </section>
+
+    </main>
+    <footer>
+        &copy; 2025 | Clínica XyZ | Créditos
+    </footer>
+
+</body>
+
+</html>
+<!-- Parte final do codigo -->
+<!-- Utilizar CTRL+Ponto/Virgula (abrir comentario) -->

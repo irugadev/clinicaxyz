@@ -477,9 +477,6 @@ th{
 
 /* Formataçao para laoyout responsivo: */
 @media screen and (max-width: 800px){       /* media queries */
-    /* header{
-        background-color: yellowgreen;
-    }   */
     main{
         width: 100%;
         padding-left: 15px;
